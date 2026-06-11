@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineRenta - Catálogo</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    body { padding-top: 80px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html"><span>CINE</span>RENTA</a>
+    <button class="menu-hamburguesa" onclick="document.getElementById('menu').classList.toggle('abierto')">&#9776;</button>
+    <ul id="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="catalogo.html" class="activo">Catálogo</a></li>
+      <li><a href="reservar.html">Reservar</a></li>
+      <li><a href="reportes.html">Reportes</a></li>
+    </ul>
+  </nav>
+
+  <div class="titulo-seccion">
+    <h2>Nuestro <span>Catálogo</span></h2>
+    <p>Elige tu género favorito y descubre las películas disponibles para alquilar</p>
+    <div class="linea-roja"></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab activo" onclick="verCategoria('terror', this)">Terror</button>
+    <button class="tab" onclick="verCategoria('romance', this)">Romance</button>
+    <button class="tab" onclick="verCategoria('accion', this)">Acción</button>
+    <button class="tab" onclick="verCategoria('comedia', this)">Comedia</button>
+    <button class="tab" onclick="verCategoria('drama', this)">Drama</button>
+  </div>
+
+  <div class="categoria activa" id="cat-terror">
+    <h3>Terror</h3>
+    <div class="grid-peliculas">
+      <div class="card">
+        <span class="badge">Terror</span>
+        <img src="imagenes/it.jfif" alt="It" />
+        <div class="info"><h4>It</h4><span>2017</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Terror</span>
+        <img src="imagenes/conjuro.jpg" alt="El Conjuro" />
+        <div class="info"><h4>El Conjuro</h4><span>2013</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Terror</span>
+        <img src="imagenes/midsommar.jpg" alt="Midsommar" />
+        <div class="info"><h4>Midsommar</h4><span>2019</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Terror</span>
+        <img src="imagenes/hereditary.jpg" alt="Hereditary" />
+        <div class="info"><h4>Hereditary</h4><span>2018</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Terror</span>
+        <img src="imagenes/get out.jpg" alt="Get Out" />
+        <div class="info"><h4>Get Out</h4><span>2017</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="categoria" id="cat-romance">
+    <h3>Romance</h3>
+    <div class="grid-peliculas">
+      <div class="card">
+        <span class="badge">Romance</span>
+        <img src="imagenes/la la land.jpg" alt="La La Land" />
+        <div class="info"><h4>La La Land</h4><span>2016</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Romance</span>
+        <img src="imagenes/titanic.jpg" alt="Titanic" />
+        <div class="info"><h4>Titanic</h4><span>1997</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Romance</span>
+        <img src="imagenes/antes del amanecer.jpg" alt="Antes del Amanecer" />
+        <div class="info"><h4>Antes del Amanecer</h4><span>1995</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Romance</span>
+        <img src="imagenes/diario de una pasion.jpg" alt="Diario de una Pasión" />
+        <div class="info"><h4>Diario de una Pasión</h4><span>2004</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Romance</span>
+        <img src="imagenes/affair.jpg" alt="Un Affair" />
+        <div class="info"><h4>Un Affair</h4><span>2012</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="categoria" id="cat-accion">
+    <h3>Acción</h3>
+    <div class="grid-peliculas">
+      <div class="card">
+        <span class="badge">Acción</span>
+        <img src="imagenes/Mad_Max_Fury_Road.jpg" alt="Mad Max" />
+        <div class="info"><h4>Mad Max: Fury Road</h4><span>2015</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Acción</span>
+        <img src="imagenes/john wick.jpg" alt="John Wick" />
+        <div class="info"><h4>John Wick</h4><span>2014</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Acción</span>
+        <img src="imagenes/inception.jpg" alt="Inception" />
+        <div class="info"><h4>Inception</h4><span>2010</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Acción</span>
+        <img src="imagenes/the dark knight.jpg" alt="The Dark Knight" />
+        <div class="info"><h4>The Dark Knight</h4><span>2008</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Acción</span>
+        <img src="imagenes/top gun.jpg" alt="Top Gun" />
+        <div class="info"><h4>Top Gun: Maverick</h4><span>2022</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="categoria" id="cat-comedia">
+    <h3>Comedia</h3>
+    <div class="grid-peliculas">
+      <div class="card">
+        <span class="badge">Comedia</span>
+        <img src="imagenes/the-grand-budapest-hotel.jpg" alt="Grand Budapest Hotel" />
+        <div class="info"><h4>Grand Budapest Hotel</h4><span>2014</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Comedia</span>
+        <img src="imagenes/supercool.jpg" alt="Supercool" />
+        <div class="info"><h4>Supercool</h4><span>2007</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Comedia</span>
+        <img src="imagenes/yes man.jpg" alt="Yes Man" />
+        <div class="info"><h4>Yes Man</h4><span>2008</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Comedia</span>
+        <img src="imagenes/Loco por mary.jfif" alt="Loco por Mary" />
+        <div class="info"><h4>Loco por Mary</h4><span>1998</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Comedia</span>
+        <img src="imagenes/mentiroso.jpg" alt="Mentiroso Mentiroso" />
+        <div class="info"><h4>Mentiroso Mentiroso</h4><span>1997</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="categoria" id="cat-drama">
+    <h3>Drama</h3>
+    <div class="grid-peliculas">
+      <div class="card">
+        <span class="badge">Drama</span>
+        <img src="imagenes/cadena perpetua.png" alt="Cadena Perpetua" />
+        <div class="info"><h4>Cadena Perpetua</h4><span>1994</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Drama</span>
+        <img src="imagenes/forrest gump.jpg" alt="Forrest Gump" />
+        <div class="info"><h4>Forrest Gump</h4><span>1994</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Drama</span>
+        <img src="imagenes/parasite.jpg" alt="Parasite" />
+        <div class="info"><h4>Parasite</h4><span>2019</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Drama</span>
+        <img src="imagenes/whiplash.jpg" alt="Whiplash" />
+        <div class="info"><h4>Whiplash</h4><span>2014</span></div>
+      </div>
+      <div class="card">
+        <span class="badge">Drama</span>
+        <img src="imagenes/moonlight.jpg" alt="Moonlight" />
+        <div class="info"><h4>Moonlight</h4><span>2016</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="logo-footer">CINERENTA</div>
+    <p>Tu tienda de confianza 2023 - Todos los derechos reservados</p>
+  </footer>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

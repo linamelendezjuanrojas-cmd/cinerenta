@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineRenta - Reservar</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    body { padding-top: 80px; background: var(--gris-oscuro); }
+  </style>
+  
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html"><span>CINE</span>RENTA</a>
+    <button class="menu-hamburguesa" onclick="document.getElementById('menu').classList.toggle('abierto')">&#9776;</button>
+    <ul id="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="reservar.html" class="activo">Reservar</a></li>
+      <li><a href="reportes.html">Reportes</a></li>
+    </ul>
+  </nav>
+
+  <div class="titulo-seccion">
+    <h2>Hacer una <span>Reserva</span></h2>
+    <p>Completa el formulario para reservar tus películas</p>
+    <div class="linea-roja"></div>
+  </div>
+
+  <div class="form-container">
+
+    <div class="campo">
+      <label for="nombre">Nombre completo del solicitante</label>
+      <input type="text" id="nombre" placeholder="Escribe tu nombre" />
+      <p class="error" id="err-nombre"></p>
+    </div>
+
+    <div class="campo">
+      <label for="edad">Edad del solicitante</label>
+      <input type="number" id="edad" placeholder="Escribe tu edad" min="0" max="120" />
+      <p class="error" id="err-edad"></p>
+    </div>
+
+    <div class="campo">
+      <label for="direccion">Dirección del solicitante</label>
+      <input type="text" id="direccion" placeholder="Ej: Calle 45 #12-30, Barranquilla" />
+      <p class="error" id="err-direccion"></p>
+    </div>
+
+    <div class="campo">
+      <label>Sexo del solicitante</label>
+      <div class="radio-grupo">
+        <label><input type="radio" name="sexo" value="Masculino" /> Masculino</label>
+        <label><input type="radio" name="sexo" value="Femenino" /> Femenino</label>
+        <label><input type="radio" name="sexo" value="Otro" /> Otro</label>
+      </div>
+      <p class="error" id="err-sexo"></p>
+    </div>
+
+    <div class="campo">
+      <label>Películas a reservar (mínimo 1 y máximo 3)</label>
+      <div class="caja-checkboxes" id="caja-checks">
+        <label><input type="checkbox" name="pelicula" value="It (Terror, 2017)" /> It (Terror, 2017)</label>
+        <label><input type="checkbox" name="pelicula" value="El Conjuro (Terror, 2013)" /> El Conjuro (Terror)</label>
+        <label><input type="checkbox" name="pelicula" value="Midsommar (Terror, 2019)" /> Midsommar (Terror)</label>
+        <label><input type="checkbox" name="pelicula" value="Hereditary (Terror, 2018)" /> Hereditary (Terror)</label>
+        <label><input type="checkbox" name="pelicula" value="Get Out (Terror, 2017)" /> Get Out (Terror)</label>
+        <label><input type="checkbox" name="pelicula" value="La La Land (Romance, 2016)" /> La La Land (Romance)</label>
+        <label><input type="checkbox" name="pelicula" value="Titanic (Romance, 1997)" /> Titanic (Romance)</label>
+        <label><input type="checkbox" name="pelicula" value="Antes del Amanecer (Romance, 1995)" /> Antes del Amanecer</label>
+        <label><input type="checkbox" name="pelicula" value="Diario de una Pasión (Romance, 2004)" /> Diario de una Pasión</label>
+        <label><input type="checkbox" name="pelicula" value="Un Affair (Romance, 2012)" /> Un Affair (Romance)</label>
+        <label><input type="checkbox" name="pelicula" value="Mad Max: Fury Road (Acción, 2015)" /> Mad Max: Fury Road</label>
+        <label><input type="checkbox" name="pelicula" value="John Wick (Acción, 2014)" /> John Wick (Acción)</label>
+        <label><input type="checkbox" name="pelicula" value="Inception (Acción, 2010)" /> Inception (Acción)</label>
+        <label><input type="checkbox" name="pelicula" value="The Dark Knight (Acción, 2008)" /> The Dark Knight</label>
+        <label><input type="checkbox" name="pelicula" value="Top Gun: Maverick (Acción, 2022)" /> Top Gun: Maverick</label>
+        <label><input type="checkbox" name="pelicula" value="Grand Budapest Hotel (Comedia, 2014)" /> Grand Budapest Hotel</label>
+        <label><input type="checkbox" name="pelicula" value="Supercool (Comedia, 2007)" /> Supercool (Comedia)</label>
+        <label><input type="checkbox" name="pelicula" value="Yes Man (Comedia, 2008)" /> Yes Man (Comedia)</label>
+        <label><input type="checkbox" name="pelicula" value="Loco por Mary (Comedia, 1998)" /> Loco por Mary</label>
+        <label><input type="checkbox" name="pelicula" value="Mentiroso Mentiroso (Comedia, 1997)" /> Mentiroso Mentiroso</label>
+        <label><input type="checkbox" name="pelicula" value="Cadena Perpetua (Drama, 1994)" /> Cadena Perpetua</label>
+        <label><input type="checkbox" name="pelicula" value="Forrest Gump (Drama, 1994)" /> Forrest Gump (Drama)</label>
+        <label><input type="checkbox" name="pelicula" value="Parasite (Drama, 2019)" /> Parasite (Drama)</label>
+        <label><input type="checkbox" name="pelicula" value="Whiplash (Drama, 2014)" /> Whiplash (Drama)</label>
+        <label><input type="checkbox" name="pelicula" value="Moonlight (Drama, 2016)" /> Moonlight (Drama)</label>
+      </div>
+      <p class="error" id="err-peliculas"></p>
+    </div>
+
+    <button class="btn-enviar" onclick="enviar()">Enviar Solicitud</button>
+
+    <div class="alerta-exito" id="exito">
+      Tu reserva fue enviada correctamente. Nos pondremos en contacto contigo pronto.
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="logo-footer">CINERENTA</div>
+    <p>Tu tienda de confianza 2023- Todos los derechos reservados</p>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

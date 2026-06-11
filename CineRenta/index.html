@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineRenta - Inicio</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html"><span>CINE</span>RENTA</a>
+    <button class="menu-hamburguesa" onclick="document.getElementById('menu').classList.toggle('abierto')">&#9776;</button>
+    <ul id="menu">
+      <li><a href="index.html" class="activo">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="reservar.html">Reservar</a></li>
+      <li><a href="reportes.html">Reportes</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <img class="hero-img" src="imagenes/imagen1.jfif" alt="Fondo cine" />
+    <div class="hero-overlay"></div>
+    <div class="hero-contenido">
+      <h1>Tu cine<br><span>en casa.</span></h1>
+      <p>Alquila las mejores películas de todas las categorías. Más de 25 títulos disponibles para llevar a casa hoy mismo.</p>
+      <a href="catalogo.html" class="btn-hero">Ver Catálogo</a>
+    </div>
+  </section>
+
+  <div class="caracteristicas">
+    <div class="card-caract">
+      <div class="icono"></div>
+      <h3>25+ Películas</h3>
+      <p>Catálogo amplio con los mejores títulos del cine mundial en 5 géneros diferentes.</p>
+    </div>
+    <div class="card-caract">
+      <div class="icono"></div>
+      <h3>Reserva en Línea</h3>
+      <p>Reserva desde tu casa y recoge tu película cuando quieras, sin filas ni esperas.</p>
+    </div>
+    <div class="card-caract">
+      <div class="icono"></div>
+      <h3>5 Géneros</h3>
+      <p>Terror, Romance, Acción, Comedia y Drama. El género perfecto para cada momento.</p>
+    </div>
+    <div class="card-caract">
+      <div class="icono"></div>
+      <h3>Calidad Garantizada</h3>
+      <p>Todas las copias son revisadas antes de cada alquiler para tu mejor experiencia.</p>
+    </div>
+  </div>
+
+  <div class="banner-inferior">
+    <h2>Reserva ahora y lleva tu película hoy</h2>
+    <a href="reservar.html" class="btn-blanco">Hacer una Reserva</a>
+  </div>
+
+  <footer>
+    <div class="logo-footer">CINERENTA</div>
+    <p>Tu tienda de confianza 2023 - Todos los derechos reservados</p>
+  </footer>
+<script src="js/scripts.js"></script>
+</body>
+</html>

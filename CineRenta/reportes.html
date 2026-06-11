@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineRenta - Reportes</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    body { padding-top: 80px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html"><span>CINE</span>RENTA</a>
+    <button class="menu-hamburguesa" onclick="document.getElementById('menu').classList.toggle('abierto')">&#9776;</button>
+    <ul id="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="reservar.html">Reservar</a></li>
+      <li><a href="reportes.html" class="activo">Reportes</a></li>
+    </ul>
+  </nav>
+
+  <div class="titulo-seccion">
+    <h2>Panel de <span>Reportes</span></h2>
+    <p>Consulta el total de solicitudes guardadas en la base de datos</p>
+    <div class="linea-roja"></div>
+  </div>
+
+  <div class="reportes-centro">
+
+    <button class="btn-consultar" onclick="cargarReporte()">Ver Total de Solicitudes</button>
+
+    <div class="resultado" id="resultado">
+      <div class="numero-grande" id="num-total">0</div>
+      <p>Solicitudes registradas</p>
+      <div class="fecha-consulta" id="fecha-consulta"></div>
+
+      <table class="tabla-solicitudes" id="tabla-solicitudes">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Películas</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="logo-footer">CINERENTA</div>
+    <p>Tu tienda de confianza 2023 - Todos los derechos reservados</p>
+  </footer>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
